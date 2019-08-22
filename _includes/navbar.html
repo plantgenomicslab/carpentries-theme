@@ -41,7 +41,7 @@
       <ul class="nav navbar-nav">
 
 	{% comment %} Always show code of conduct. {% endcomment %}
-        <li><a href="{{ relative_root_path }}{% link CODE_OF_CONDUCT.md %}">Code of Conduct</a></li>
+	{% comment %}        <li><a href="{{ relative_root_path }}{% link CODE_OF_CONDUCT.md %}">Code of Conduct</a></li> {% comment %}
 
         {% if site.kind == "lesson" %}
 	{% comment %} Show setup instructions. {% endcomment %}
@@ -49,13 +49,13 @@
 
         {% comment %} Show lesson episodes for lessons. {% endcomment %}
         <li class="dropdown">
-          <a href="{{ relative_root_path }}/" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Episodes <span class="caret"></span></a>
+          <a href="{{ relative_root_path }}/" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Lecture <span class="caret"></span></a>
           <ul class="dropdown-menu">
             {% for episode in site.episodes %}
             <li><a href="{{ relative_root_path }}{{ episode.url }}">{{ episode.title }}</a></li>
             {% endfor %}
-	    <li role="separator" class="divider"></li>
-            <li><a href="{{ relative_root_path }}{% link aio.md %}">All in one page (Beta)</a></li>
+	    {% comment %}	    <li role="separator" class="divider"></li> {% comment %}
+	    {% comment %}	    <li><a href="{{ relative_root_path }}{% link aio.md %}">All in one page (Beta)</a></li> {% comment %}
           </ul>
         </li>
 	{% endif %}
