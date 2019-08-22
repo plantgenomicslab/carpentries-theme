@@ -39,10 +39,10 @@
     </div>
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
-
+ <!--
 	{% comment %} Always show code of conduct. {% endcomment %}
 	{% comment %}        <li><a href="{{ relative_root_path }}{% link CODE_OF_CONDUCT.md %}">Code of Conduct</a></li> {% comment %}
-
+	-->
         {% if site.kind == "lesson" %}
 	{% comment %} Show setup instructions. {% endcomment %}
         <li><a href="{{ relative_root_path }}{% link setup.md %}">Setup</a></li>
@@ -54,8 +54,8 @@
             {% for episode in site.episodes %}
             <li><a href="{{ relative_root_path }}{{ episode.url }}">{{ episode.title }}</a></li>
             {% endfor %}
-	    {% comment %}	    <li role="separator" class="divider"></li> {% comment %}
-	    {% comment %}	    <li><a href="{{ relative_root_path }}{% link aio.md %}">All in one page (Beta)</a></li> {% comment %}
+	   <!--  {% comment %}	    <li role="separator" class="divider"></li> {% comment %}
+	    {% comment %}	    <li><a href="{{ relative_root_path }}{% link aio.md %}">All in one page (Beta)</a></li> {% comment %} -->
           </ul>
         </li>
 	{% endif %}
